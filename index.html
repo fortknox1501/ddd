@@ -1,41 +1,57 @@
-```html
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Download</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Socket</title>
 
     <style>
         body {
             margin: 0;
+            padding: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
             background: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
 
         button {
-            width: 400px;
-            height: 150px;
-            font-size: 40px;
+            width: 90%;
+            max-width: 500px;
+            height: 180px;
+            font-size: 45px;
             font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            background: #007aff;
+            color: white;
             cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        button:active {
+            opacity: 0.7;
         }
     </style>
 </head>
 
 <body>
 
-    <button onclick="downloadFile()">DOWNLOAD</button>
+    <button onclick="downloadFile()">DOWNLOAD SOCKET</button>
 
     <script>
         function downloadFile() {
             const link = document.createElement("a");
+
             link.href = "socket.ipa";
             link.download = "socket.ipa";
+
+            document.body.appendChild(link);
             link.click();
+            document.body.removeChild(link);
         }
     </script>
 
