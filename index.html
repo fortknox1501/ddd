@@ -1,0 +1,44 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        button {
+            width: 400px;
+            height: 150px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="downloadFile()">DOWNLOAD</button>
+
+    <script>
+        function downloadFile() {
+            const link = document.createElement("a");
+            link.href = "socket.ipa";
+            link.download = "socket.ipa";
+            link.click();
+        }
+    </script>
+
+</body>
+</html>
+```
